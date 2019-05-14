@@ -1,4 +1,5 @@
 rtt_test_f7\board.o: ../Middlewares/Third_Party/RT-Thread/bsp/board.c
+rtt_test_f7\board.o: ../Inc/board.h
 rtt_test_f7\board.o: ../Middlewares/Third_Party/RT-Thread//include/rthw.h
 rtt_test_f7\board.o: ../Middlewares/Third_Party/RT-Thread//include/rtthread.h
 rtt_test_f7\board.o: ../Inc/rtconfig.h

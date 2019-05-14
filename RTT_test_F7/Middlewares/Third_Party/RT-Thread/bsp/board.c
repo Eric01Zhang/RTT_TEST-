@@ -8,9 +8,11 @@
  * 2017-07-24     Tanek        the first version
  * 2018-11-12     Ernest Chen  modify copyright
  */
+#include "board.h"
 #include <rthw.h>
 #include <rtthread.h>
 
+#if 0 
 #define _SCB_BASE       (0xE000E010UL)
 #define _SYSTICK_CTRL   (*(rt_uint32_t *)(_SCB_BASE + 0x0))
 #define _SYSTICK_LOAD   (*(rt_uint32_t *)(_SCB_BASE + 0x4))
@@ -41,6 +43,7 @@ static uint32_t _SysTick_Config(rt_uint32_t ticks)
     
     return 0;
 }
+#endif
 
 #if defined(RT_USING_USER_MAIN) && defined(RT_USING_HEAP)
 #define RT_HEAP_SIZE 1536
@@ -61,11 +64,15 @@ RT_WEAK void *rt_heap_end_get(void)
  */
 void rt_hw_board_init()
 {	
+    #if 0
 	/* System Clock Update */
 	SystemCoreClockUpdate();
 	
 	/* System Tick Configuration */
 	_SysTick_Config(SystemCoreClock / RT_TICK_PER_SECOND);
+    #endif
+
+    SystemClock_Config();
 
     /* Call components board initial (use INIT_BOARD_EXPORT()) */
 #ifdef RT_USING_COMPONENTS_INIT
