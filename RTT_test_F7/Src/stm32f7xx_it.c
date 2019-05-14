@@ -77,7 +77,6 @@ void NMI_Handler(void)
   /* USER CODE END NonMaskableInt_IRQn 1 */
 }
 
-#if 0
 /**
   * @brief This function handles Hard fault interrupt.
   */
@@ -107,7 +106,6 @@ void MemManage_Handler(void)
     /* USER CODE END W1_MemoryManagement_IRQn 0 */
   }
 }
-#endif
 
 /**
   * @brief This function handles Pre-fetch fault, memory access fault.
@@ -165,7 +163,6 @@ void DebugMon_Handler(void)
   /* USER CODE END DebugMonitor_IRQn 1 */
 }
 
-#if 0
 /**
   * @brief This function handles Pendable request for system service.
   */
@@ -178,7 +175,6 @@ void PendSV_Handler(void)
 
   /* USER CODE END PendSV_IRQn 1 */
 }
-
 
 /**
   * @brief This function handles System tick timer.
@@ -193,7 +189,6 @@ void SysTick_Handler(void)
 
   /* USER CODE END SysTick_IRQn 1 */
 }
-#endif
 
 /******************************************************************************/
 /* STM32F7xx Peripheral Interrupt Handlers                                    */

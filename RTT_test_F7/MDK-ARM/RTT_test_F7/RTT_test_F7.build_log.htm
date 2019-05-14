@@ -22,7 +22,7 @@ Dialog DLL:      TCM.DLL V1.36.1.0
  
 <h2>Project:</h2>
 E:\Study\Rtt_rtos\RTT_test_F7\MDK-ARM\RTT_test_F7.uvprojx
-Project File Date:  05/09/2019
+Project File Date:  05/14/2019
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
@@ -30,9 +30,13 @@ Build target 'RTT_test_F7'
 compiling context_rvds.S...
 compiling stm32f7xx_it.c...
 linking...
-Program Size: Code=13214 RO-data=2482 RW-data=296 ZI-data=7984  
-FromELF: creating hex file...
-"RTT_test_F7\RTT_test_F7.axf" - 0 Error(s), 0 Warning(s).
+RTT_test_F7\RTT_test_F7.axf: Error: L6200E: Symbol MemManage_Handler multiply defined (by context_rvds.o and stm32f7xx_it.o).
+RTT_test_F7\RTT_test_F7.axf: Error: L6200E: Symbol PendSV_Handler multiply defined (by context_rvds.o and stm32f7xx_it.o).
+RTT_test_F7\RTT_test_F7.axf: Error: L6200E: Symbol SysTick_Handler multiply defined (by board.o and stm32f7xx_it.o).
+Not enough information to list image symbols.
+Not enough information to list load addresses in the image map.
+Finished: 2 information, 0 warning and 3 error messages.
+"RTT_test_F7\RTT_test_F7.axf" - 3 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -55,6 +59,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.1.2
+Target not created.
 Build Time Elapsed:  00:00:03
 </pre>
 </body>
